@@ -1,0 +1,29 @@
+# Data
+data/
+competition/
+*.parquet
+*.memmap
+*.zip
+
+# Models & Runs
+runs/
+*.cbm
+*.pt
+*.ckpt
+*.onnx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
