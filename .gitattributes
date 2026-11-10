@@ -1,9 +1,0 @@
-* text=auto eol=lf
-
-*.parquet binary
-*.memmap binary
-*.pt binary
-*.cbm binary
-*.onnx binary
-
-*.ipynb -text diff=none

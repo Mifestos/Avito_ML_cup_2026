@@ -1,29 +1,77 @@
-# Data
-data/
-competition/
-*.parquet
-*.memmap
-*.zip
-
-# Models & Runs
-runs/
-*.cbm
-*.pt
-*.ckpt
-*.onnx
-
-# Python
-__pycache__/
-*.py[cod]
+# ==========================================
+# 1. Virtual Environments
+# ==========================================
 .venv/
 venv/
+env/
 .env
-.ipynb_checkpoints/
-.pytest_cache/
-.ruff_cache/
+.uv/
 
-# IDE & OS
+# ==========================================
+# 2. Python Cache & Build
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# ==========================================
+# 3. Jupyter Notebooks
+# ==========================================
+.ipynb_checkpoints/
+
+# ==========================================
+# 4. Project Data (Датасеты)
+# ==========================================
+# Исключаем папки с тяжелыми данными
+data/
+competition/
+baseline/*.parquet
+# На всякий случай исключаем тяжелые расширения
+*.parquet
+*.csv
+*.zip
+*.tar.gz
+*.memmap
+*.meta
+
+# ==========================================
+# 5. Models & Outputs
+# ==========================================
+# Исключаем папку с результатами (модели, логи, сабмиты)
+runs/
+models/
+logs/
+output/
+submissions/
+# Веса моделей
+*.cbm
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.joblib
+
+# ==========================================
+# 6. IDE & OS
+# ==========================================
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# ==========================================
+# 7. System & Tool Artifacts
+# ==========================================
+# Мусор от macOS
+__MACOSX/
+._*
+
+# Логи и артефакты обучения CatBoost
+catboost_info/
